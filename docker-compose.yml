@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  jumpwebgame:
+    container_name: jumpingdemogame
+    image: jumpingdemo:1.0
+    build: .
+    ports:
+      - "8083:80"
+  database:
+    container_name: sqlcontainer
+    image: mysql 
+    ports:
+      - "8084:3306"
